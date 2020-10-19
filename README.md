@@ -92,4 +92,4 @@ A user can also force the client to use a certain older revision.
 
 ##### Archive
 
-Use a different directory for each revision. If the original peer removes all the files and pushes a revision the archive strategy will still have the latest non-sabotagued revision.
+Use a different directory for each revision. If the original peer removes all the files and pushes a revision the archive strategy will still have the latest non-sabotagued revision. Not as mad as it sounds if the user's file system supports deduplication.
