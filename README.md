@@ -40,7 +40,7 @@ When files are added to, mutated or removed from the file set, a new torrent is 
 
 ## Reference
 
-A more readable version of the JSON schema.
+A more readable version of the [JSON schema](./schema.json).
 
 ### Root Object
 

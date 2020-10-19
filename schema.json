@@ -1,0 +1,35 @@
+{
+    "$id": "https://strindevall.com/river.schema.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "River",
+    "type": "object",
+    "required": [ "title", "revisions" ],
+    "properties": {
+        "title": {
+        "type": "string",
+        "description": "Describes the set of files being distributed."
+        },
+        "revisions": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/revision" }
+        }
+    },
+    "definitions": {
+        "revision": {
+          "type": "object",
+          "required": [ "date", "url" ],
+          "properties": {
+            "date": {
+              "type": "string",
+              "format": "date-time",
+              "description": "Date of publication."
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "description": "Torrent file or magnet link distributing the revision."
+            }
+          }
+        }
+      }
+}
