@@ -8,7 +8,7 @@
 # River Protocol Specification
 
 Version 1.0  
-Author: Pär Strindevall \<par@strindevall.com>  
+Author: Pär Strindevall
 
 ## Abstract
 
@@ -20,7 +20,7 @@ The BitTorrent protocol is a scalable peer-to-peer file distribution protocol. T
 
 File sets aggregated through archival require continuous additions to maintain completeness and despite being a scalable and well established file distribution protocol BitTorrent is ill suited by itself for sharing growing collections of files.
 
-## The River Solution
+## River
 
 River wraps torrent files in a dynamic feed to enable updating which torrent is operating on the file set. 
 
@@ -87,20 +87,3 @@ The most common (and suitable default) strategy is keeping the latest revision t
 
 ##### Force
 A user can also force the client to use a certain older revision.
-
-## Discussion
-#### Why not just use RSS?
-River is very bare bones and RSS is less so. A valid RSS feed requires a `title`, `link` and `description` element. River only uses a `title` because it's good to know what the feed is distributing. The link property is redundant because you wouldn't have the response to parse if you didn't have a link in the first place. Relying on the link for up to date information also lets the title change since it should always reflect the distributed content.
-
-Description is omitted to keep the protocol as simple as possible. It can always be extended but an RSS feed without a description is considered invalid.
-
-Furthermore, every element of an `<item>` in RSS is optional with the exception (?) that at least one of `title` or `description` must be present. River is more strict since it's a less general implementation of the feed paradigm.
-
-Last but not least, RSS is an XML based language. JSON is more readable and accessible to modern developers.
-
-With that said, River is heavily inspired by RSS with regards to nomanclature and structure.
-
-#### Changelog
-I've contemplated letting revisions have a property `changelog` which would be a string supplied by the River maintainer
-
-By comparing the `files` entry of two revision torrents the client can generate a diff of addition, removal, renaming, mutation and present these changes to the user.
