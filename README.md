@@ -83,7 +83,13 @@ However, if a file is deleted there should be a mechanism that removes the file 
 Clients should support different strategies for handling a River feed. 
 
 ##### Latest  
-The most common (and suitable default) strategy is keeping the latest revision torrent in the BitTorrent.
+
+The most common (and suitable default) strategy is keeping the latest revision torrent in the BitTorrent client.
 
 ##### Force
+
 A user can also force the client to use a certain older revision.
+
+##### Archive
+
+Use a different directory for each revision. If the original peer removes all the files and pushes a revision the archive strategy will still have the latest non-sabotagued revision.
