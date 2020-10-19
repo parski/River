@@ -1,3 +1,10 @@
+![](river.png)  
+
+> And out again I curve and flow  
+> To join the brimming river,  
+> For men may come and men may go,  
+> But I go on for ever.  
+
 # River Protocol Specification
 
 Version 1.0  
@@ -55,7 +62,7 @@ A revision represents a snapshot of the file set.
 
 ### Client Behavior
 
-Client behavior is mostly up to the client. Apart from *the one rule* of River clients only recommendations are provided.
+Apart from *the one rule* for River clients to abide by only behavior recommendations are provided.
 
 #### The One Rule
 
