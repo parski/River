@@ -30,7 +30,7 @@ exports.update = function(request, response) {
 };
 
 exports.delete = function(request, response) {
-    River.remove({ _id: request.params.riverId }, function(error, river) {
+    River.deleteOne({ _id: request.params.riverId }, function(error, river) {
         if (error)
             response.send(error);
         response.json({ message: 'River successfully deleted' });
