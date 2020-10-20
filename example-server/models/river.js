@@ -20,9 +20,22 @@ const River = new Schema({
                 validate: (value) => {
                     return validator.isURL(value)
                 }
-            }
+            },
+            _id: false
         }
-    ]
+    ],
+}, { versionKey: false });
+
+River.virtual('id').get(function(){
+    return this._id.toHexString();
+});
+
+River.set('toJSON', {
+    virtuals: true,
+    transform: function (doc, river, options) {
+        river.id = river._id;
+        delete river._id;
+    }
 });
 
 module.exports = mongoose.model('River', River);
