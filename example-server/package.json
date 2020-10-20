@@ -1,0 +1,14 @@
+{
+  "name": "example-server",
+  "version": "1.0.0",
+  "description": "Example River server application in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pär Strindevall",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
