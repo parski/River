@@ -60,9 +60,7 @@ exports.delete = function(request, response) {
             response.status(400).send(error)
             return
         }
-
-        console.log(result)
-            
+        
         if (result.deletedCount == 0) {
             response.status(204).send()
             return
