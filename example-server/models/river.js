@@ -4,11 +4,6 @@ const validator = require('validator')
 const Schema = mongoose.Schema;
 
 const River = new Schema({
-    id: {
-        type: String,
-        required: true,
-        unique: true
-    },
     title: {
         type: String,
         required: true
